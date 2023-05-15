@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace techlingo.projeto.Migrations
 {
     /// <inheritdoc />
-    public partial class CRIACAO : Migration
+    public partial class criacao : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -18,7 +18,7 @@ namespace techlingo.projeto.Migrations
                     ID_CURSO = table.Column<int>(type: "NUMBER(10)", nullable: false)
                         .Annotation("Oracle:Identity", "START WITH 1 INCREMENT BY 1"),
                     NM_CURSO = table.Column<string>(type: "NVARCHAR2(80)", maxLength: 80, nullable: false),
-                    DS_DURACAO = table.Column<string>(type: "NVARCHAR2(20)", maxLength: 20, nullable: false)
+                    DS_DURACAO = table.Column<int>(type: "NUMBER(10)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -32,7 +32,7 @@ namespace techlingo.projeto.Migrations
                     ID_PLANO = table.Column<int>(type: "NUMBER(10)", nullable: false)
                         .Annotation("Oracle:Identity", "START WITH 1 INCREMENT BY 1"),
                     NM_PLANO = table.Column<string>(type: "NVARCHAR2(80)", maxLength: 80, nullable: false),
-                    VL_PLANO = table.Column<decimal>(type: "DECIMAL(18, 2)", nullable: false)
+                    VL_PLANO = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -48,6 +48,7 @@ namespace techlingo.projeto.Migrations
                     NM_ALUNO = table.Column<string>(type: "NVARCHAR2(80)", maxLength: 80, nullable: false),
                     NR_CPF = table.Column<string>(type: "NVARCHAR2(14)", maxLength: 14, nullable: false),
                     DS_EMAIL = table.Column<string>(type: "NVARCHAR2(80)", maxLength: 80, nullable: false),
+                    DS_SENHA = table.Column<string>(type: "NVARCHAR2(30)", maxLength: 30, nullable: false),
                     DT_NASCIMENTO = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false),
                     FK_ID_PLANO = table.Column<int>(type: "NUMBER(10)", nullable: false)
                 },
@@ -69,7 +70,8 @@ namespace techlingo.projeto.Migrations
                     ID_ALUNO = table.Column<int>(type: "NUMBER(10)", nullable: false),
                     ID_CURSO = table.Column<int>(type: "NUMBER(10)", nullable: false),
                     NR_NOTA = table.Column<int>(type: "NUMBER(10)", nullable: false),
-                    ST_STATUS = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true)
+                    ST_STATUS = table.Column<string>(type: "NVARCHAR2(20)", maxLength: 20, nullable: true),
+                    DT_CONCLUSAO = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: true)
                 },
                 constraints: table =>
                 {

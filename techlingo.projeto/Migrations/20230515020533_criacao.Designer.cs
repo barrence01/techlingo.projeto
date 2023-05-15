@@ -12,8 +12,8 @@ using techlingo.projeto.Repository.Context;
 namespace techlingo.projeto.Migrations
 {
     [DbContext(typeof(DataBaseContext))]
-    [Migration("20230513142846_CRIACAO")]
-    partial class CRIACAO
+    [Migration("20230515020533_criacao")]
+    partial class criacao
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -39,6 +39,12 @@ namespace techlingo.projeto.Migrations
                         .HasMaxLength(80)
                         .HasColumnType("NVARCHAR2(80)")
                         .HasColumnName("DS_EMAIL");
+
+                    b.Property<string>("ds_senha")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("NVARCHAR2(30)")
+                        .HasColumnName("DS_SENHA");
 
                     b.Property<DateTime>("dt_nascimento")
                         .HasColumnType("TIMESTAMP(7)")
@@ -77,12 +83,17 @@ namespace techlingo.projeto.Migrations
                         .HasColumnType("NUMBER(10)")
                         .HasColumnName("ID_CURSO");
 
+                    b.Property<DateTime?>("dt_conclusao")
+                        .HasColumnType("TIMESTAMP(7)")
+                        .HasColumnName("DT_CONCLUSAO");
+
                     b.Property<int>("nr_nota")
                         .HasColumnType("NUMBER(10)")
                         .HasColumnName("NR_NOTA");
 
                     b.Property<string>("st_status")
-                        .HasColumnType("NVARCHAR2(2000)")
+                        .HasMaxLength(20)
+                        .HasColumnType("NVARCHAR2(20)")
                         .HasColumnName("ST_STATUS");
 
                     b.HasKey("alunoId", "cursoId");
@@ -101,10 +112,8 @@ namespace techlingo.projeto.Migrations
 
                     OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id_curso"));
 
-                    b.Property<string>("ds_duracao")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("NVARCHAR2(20)")
+                    b.Property<int>("ds_duracao")
+                        .HasColumnType("NUMBER(10)")
                         .HasColumnName("DS_DURACAO");
 
                     b.Property<string>("nm_curso")
@@ -134,7 +143,7 @@ namespace techlingo.projeto.Migrations
                         .HasColumnName("NM_PLANO");
 
                     b.Property<decimal>("vl_plano")
-                        .HasColumnType("DECIMAL(18, 2)")
+                        .HasColumnType("decimal(18,2)")
                         .HasColumnName("VL_PLANO");
 
                     b.HasKey("id_plano");
@@ -156,30 +165,30 @@ namespace techlingo.projeto.Migrations
             modelBuilder.Entity("techlingo.projeto.Models.tl_aluno_cursoModel", b =>
                 {
                     b.HasOne("techlingo.projeto.Models.tl_alunoModel", "tl_alunoModel")
-                        .WithMany("aluno_cursos")
+                        .WithMany("Cursando")
                         .HasForeignKey("alunoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("techlingo.projeto.Models.tl_cursoModel", "tl_cursoModel")
-                        .WithMany("aluno_cursos")
+                    b.HasOne("techlingo.projeto.Models.tl_cursoModel", "curso")
+                        .WithMany("Cursando")
                         .HasForeignKey("cursoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("tl_alunoModel");
+                    b.Navigation("curso");
 
-                    b.Navigation("tl_cursoModel");
+                    b.Navigation("tl_alunoModel");
                 });
 
             modelBuilder.Entity("techlingo.projeto.Models.tl_alunoModel", b =>
                 {
-                    b.Navigation("aluno_cursos");
+                    b.Navigation("Cursando");
                 });
 
             modelBuilder.Entity("techlingo.projeto.Models.tl_cursoModel", b =>
                 {
-                    b.Navigation("aluno_cursos");
+                    b.Navigation("Cursando");
                 });
 #pragma warning restore 612, 618
         }
