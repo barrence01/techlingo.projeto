@@ -1,0 +1,14 @@
+
+As aplicações utilizam o localhost para se comunicar com api.
+Em caso de qualquer problema para mudar o dominio:
+Website React: O dominio está no arquivo 'config.js' no root do projeto
+App mobile: O dominio está em res>values>strings
+
+
+Integrantes do grupo:
+
+Arthur Henrique Camargo de Sousa – RM 95433 
+Lucas Martins de Azevedo – RM 95445 
+Pedro Victor Pereira Coque dos Santos – RM 94216 
+William Barrence Santos Junior – RM 93586 
+Marcos Vinnícius Silva – RM 89157 

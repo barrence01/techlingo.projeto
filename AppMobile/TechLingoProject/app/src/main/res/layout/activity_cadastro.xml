@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Header com fundo azul (#469FD1) -->
+
+            <!-- Campo de Login -->
+            <LinearLayout
+                android:id="@+id/headerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#469FD1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- Imagem do logotipo -->
+
+                <!-- Texto "Bem-vindo ao TECHLINGO" -->
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="68dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/logo" />
+
+                <TextView
+                    android:layout_width="326dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abril_fatface"
+                    android:padding="16dp"
+                    android:text="CADASTRO"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="match_parent"
+                android:layout_height="111dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="-7dp"
+                android:layout_marginBottom="-4dp"
+                android:src="@drawable/retangulobacia" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="74dp"
+                android:adjustViewBounds="false"
+                android:scaleType="centerInside"
+                android:src="@drawable/bacia" />
+
+            <EditText
+                android:id="@+id/txtNomeCompleto"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_below="@+id/headerLayout"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="62dp"
+                android:layout_marginTop="41dp"
+                android:layout_marginEnd="64dp"
+                android:background="@drawable/edittext_border"
+                android:hint="   Nome completo"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/txtDataAniversarioCadastro"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_below="@+id/txtNomeCompleto"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="61dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="65dp"
+                android:maxLength="10"
+                android:background="@drawable/edittext_border"
+                android:hint="   Data Aniversário"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/txtNrCPF"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_below="@+id/txtDataAniversarioCadastro"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="61dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="65dp"
+                android:background="@drawable/edittext_border"
+                android:hint="   CPF"
+                android:maxLength="11"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/txtEmailCadastro"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_below="@+id/txtNrCPF"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="61dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="65dp"
+                android:background="@drawable/edittext_border"
+                android:hint="   Email"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/txtSenhaCadastro"
+                style="@style/teste"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_below="@+id/txtEmailCadastro"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="61dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="65dp"
+                android:hint=" Senha"
+                android:singleLine="true"/>
+
+            <Spinner
+                android:id="@+id/lista_planos"
+                android:layout_width="288dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/textView"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="61dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="62dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="200dp"
+                android:layout_height="29dp"
+                android:layout_below="@+id/txtSenhaCadastro"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="61dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="150dp"
+                android:text="Planos"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:singleLine="true"/>
+
+            <Button
+                android:id="@+id/btn_cadastrar"
+                android:layout_width="123dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lista_planos"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="31dp"
+                android:layout_marginEnd="120dp"
+                android:text="Cadastrar"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

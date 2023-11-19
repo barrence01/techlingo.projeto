@@ -1,0 +1,164 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Cabeçalho -->
+    <LinearLayout
+        android:id="@+id/footerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:layout_alignParentBottom="true"
+        android:background="#469FD1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- Imagem do logotipo -->
+        <ImageView
+            android:id="@+id/imageViewFooter"
+            android:layout_width="68dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo" />
+
+        <!-- Texto "Bem-vindo ao TECHLINGO" -->
+        <TextView
+            android:layout_width="326dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abril_fatface"
+            android:padding="16dp"
+            android:text="TECHLINGO"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:background="#469FD1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- Imagem do logotipo -->
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="68dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo" />
+
+        <!-- Texto "Bem-vindo ao TECHLINGO" -->
+        <TextView
+            android:layout_width="326dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:padding="16dp"
+            android:text="Cursos"
+            android:textAppearance="@android:style/TextAppearance.Material.Body1"
+            android:textColor="#FFFFFF"
+            android:textSize="40dp" />
+    </LinearLayout>
+
+    <!-- Conteúdo do corpo (botões dos cursos) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="438dp"
+        android:layout_below="@id/headerLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="215dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+        <Button
+            android:id="@+id/btn_backend"
+            android:layout_width="376dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/listacursos"
+            android:drawableStart="@drawable/backend"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/archivo_black"
+            android:gravity="start|center_vertical"
+            android:paddingStart="8dp"
+            android:text="Back-End"
+            android:textColor="#000000" />
+
+
+        <!-- Botão para o curso de Front-End -->
+        <Button
+            android:id="@+id/btn_frontend"
+            android:layout_width="376dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/listacursos"
+            android:drawableStart="@drawable/frontend"
+            android:drawablePadding="8dp"
+            android:elevation="4dp"
+            android:fontFamily="@font/archivo_black"
+            android:gravity="start|center_vertical"
+            android:paddingStart="8dp"
+            android:text="Front-End"
+            android:textColor="#000000" />
+
+        <!-- Espaçamento entre botões -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <!-- Botão para o curso de Database -->
+        <Button
+            android:id="@+id/btn_database"
+            android:layout_width="376dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/listacursos"
+            android:drawableStart="@drawable/database"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/archivo_black"
+            android:gravity="start|center_vertical"
+            android:paddingStart="8dp"
+            android:text="Database"
+            android:textColor="#000000" />
+
+        <!-- Espaçamento entre botões -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <!-- Botão para o curso de Lógica de Programação -->
+        <Button
+            android:id="@+id/btn_logica_programacao"
+            android:layout_width="376dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/listacursos"
+            android:drawableStart="@drawable/logica"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/archivo_black"
+            android:gravity="start|center_vertical"
+            android:paddingStart="8dp"
+            android:text="Lógica de Programação"
+            android:textColor="#000000" />
+
+        <!-- Espaçamento entre botões -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <!-- Botão para o curso de Cloud Computing -->
+        <Button
+            android:id="@+id/btn_cloud"
+            android:layout_width="376dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/listacursos"
+            android:drawableStart="@drawable/cloud"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/archivo_black"
+            android:gravity="start|center_vertical"
+            android:paddingStart="8dp"
+            android:text="Cloud Computing"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+    <!-- Rodapé -->
+
+</RelativeLayout>

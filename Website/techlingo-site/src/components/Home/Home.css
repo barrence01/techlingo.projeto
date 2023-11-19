@@ -1,0 +1,40 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #3498db; /* Cor de fundo azul */
+}
+
+.login-container {
+  text-align: center;
+}
+
+.login-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.input-home {
+  width: 80%;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
