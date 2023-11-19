@@ -1,5 +1,0 @@
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle">
-    <solid android:color="#7EED7E" /> <!-- Cor verde para alternativa correta -->
-    <corners android:radius="8dp" /> <!-- Cantos arredondados -->
-</shape>

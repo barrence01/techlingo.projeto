@@ -1,8 +1,0 @@
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item>
-        <shape android:shape="rectangle">
-            <solid android:color="#FFFFFF" /> <!-- Cor do fundo da caixa (branco) -->
-            <stroke android:color="#000000" android:width="1dp" /> <!-- Cor e largura da borda (preto) -->
-        </shape>
-    </item>
-</layer-list>

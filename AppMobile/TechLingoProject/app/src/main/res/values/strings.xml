@@ -1,5 +1,0 @@
-<resources>
-    <string name="app_name">TechLingo</string>
-    <string name="api_baseurl">http://10.0.2.2:5289/</string>
-    <string name="preferencias">MyPrefs</string>
-</resources>
